@@ -8,5 +8,6 @@ replaced. May be from SQL!!!
 This is good for corporations/banks/govt's, where they want more secured webs,
 with very small "public" code.
 
+This is mostly used in CGI.
 
 https://www.patreon.com/biddut

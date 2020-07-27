@@ -1,27 +1,32 @@
 #include <iostream>
-#include <cpphtml/CHtml.h>
-//g++ -o HtmlTest HtmlTest.cpp -I/usr/local/include -L/usr/local/lib -lcpphtml
-//HtmlTest result.html out.html
+#include <CHtml.h>
+//g++ -o HtmlTest     CHtml.cpp HtmlTest.cpp -I .
+//or
+//g++ -o HtmlTest.cgi CHtml.cpp HtmlTest.cpp -I .
+
+//testing
+// ./HtmlTest.cgi result.html /dev/stdout
+// ./HtmlTest.cgi result.html index.html
 
 
 int main(int argc, char* argv[]) 
 {
-  if(argc < 2)
+  if(argc < 3)
   {
-	  cout <<" Usage: HtmlTest Infile [outfile]"<<endl;
+	  cout <<" Usage: HtmlTest infile outfile"<<endl;
       return 1;
   }
   char *a1,*a2;
   a1=argv[1];
 
-  if(argc < 3)
-  {
-	  a2="/dev/stdout";
-  }
-  else
-  {
+  //if(argc < 3)
+  //{
+  //	  a2=const_cast<char*> ( string("/dev/stdout").c_str());
+  //}
+  //else
+  //{
 	  a2=argv[2];
-  }
+  //}
 
   CHtml h(a1,a2);
   if(h.IsReady())

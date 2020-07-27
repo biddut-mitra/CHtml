@@ -10,4 +10,10 @@ with very small "public" code.
 
 This is mostly used in CGI.
 
+To install in the system after extracting in a folder/directory:
+    (as root) 
+    #make install clean
+to uninstall
+    #make uninstall
+
 https://www.patreon.com/biddut

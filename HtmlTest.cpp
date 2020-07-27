@@ -3,7 +3,9 @@
 //g++ -o HtmlTest     CHtml.cpp HtmlTest.cpp -I .
 //or
 //g++ -o HtmlTest.cgi CHtml.cpp HtmlTest.cpp -I .
-
+//or
+//g++ -o HtmlTest HtmlTest.cpp -I/usr/local/include/chtml -L/usr/local/lib -lchtml
+//or
 //testing
 // ./HtmlTest.cgi result.html /dev/stdout
 // ./HtmlTest.cgi result.html index.html
@@ -34,7 +36,7 @@ int main(int argc, char* argv[])
 	  int stage=h.ReadDataBlock();
 	  h.Append("__result_header__","Example header");
 	  h.Append("__result_body__","this is the body of the messsage.");
-	  h.Append("__author__","Jahan");
+	  h.Append("__author__","Biddut Mitra");
 	  h.Append("__source__",__FILE__);
 	  h.Process(stage);
   }

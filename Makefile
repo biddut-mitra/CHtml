@@ -1,6 +1,7 @@
 #CHTML Version 3.28
 
-CC=g++
+CC=c++
+#CC=g++
 OPTION= -D __RELEASE__
 
 MV=/bin/mv

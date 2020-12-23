@@ -373,7 +373,8 @@ void  CHtml::Replace(string& modifyMe,   string findMe, string newChars)
 {
   // Look in modifyMe for the "find string"
   // starting at position 0
-  unsigned int i = modifyMe.find(findMe, 0);
+  //unsigned int i = modifyMe.find(findMe, 0);
+  std::size_t i = modifyMe.find(findMe, 0);	
   // Did we find the string to replace?
   if(i != string::npos)
     // Replace the find string with newChars
